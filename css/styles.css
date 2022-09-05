@@ -126,10 +126,8 @@ img{
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
-
     background-color: var(--hero-background-color);
-    background-image: linear-gradient(var(--overlay-gradient-color),var(--overlay-gradient-color)),
-    url(../images/bg-hero.jpg);
+    background-image: linear-gradient (to right, var(--overlay-gradient-color),var(--overlay-gradient-color)), url(../images/bg-hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -138,6 +136,7 @@ img{
 .hero-title{
     margin: auto;
     width: 696px;
+    
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
@@ -255,7 +254,7 @@ img{
     border-radius: 0px 0px 4px 4px;
     background-color: var(--accent-primary-color);
 }
-.socials-list{
+.social-list{
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -280,17 +279,38 @@ img{
     background-color: var(--accent-secondary-color);
     fill: var(--accent-primary-color);
 }
+.social-list{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+.social-item{ 
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;     
+    border-radius: 50%;
+}
+.socials-item:hover .socials-icon,
+.socials-item:focus .socials-icon{
+    background-color: var(--accent-secondary-color);
+    fill: var(--accent-primary-color);
+}
+.socials-link{
+    color: var(--icon-color);
+}
+.socials-icon{
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
 
 /* клиенты */
 .client-list{
     display: flex;
-    align-items: center;
-    justify-content: center; 
     gap: 30px;
-}
-.client-icon:hover,
-.client-icon:focus{
-    color: var(--accent-secondary-color);
 }
 .client-icon-item{ 
     display: flex;
@@ -298,9 +318,14 @@ img{
     justify-content: center;  
     margin-top: 50px;
     width: 170px;
-    height: 92px;       
-    border: 1px solid #AFB1B8;
+    height: 92px;
+    color: var(--icon-color);       
+    border: 1px solid var(--icon-color);
     border-radius: 4px;
+}
+.client-icon-item:hover,
+.client-icon-item:focus{
+    color: var(--accent-secondary-color);
 }
 .icon-client{
     width: 106px;
@@ -386,6 +411,7 @@ img{
 }
 /* подвал */
 .footer{
+    display: flex;
     padding-top: 60px;
     padding-bottom: 60px;
     line-height: 1.71;
@@ -415,7 +441,7 @@ img{
 .footer-contacts:focus{
     color: var(--accent-secondary-color);
 }
-.footer-social{
+.footer-box{
     display: flex;
 }
 .footer-socials-title{
@@ -425,4 +451,32 @@ img{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--accent-primary-color);
+}
+.socials-list{
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    padding-top: 20px;
+}
+.socials-item{ 
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;     
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+.socials-item:hover .socials-icon,
+.socials-item:focus .socials-icon{
+    background-color: var(--accent-secondary-color);
+    fill: var(--accent-primary-color);
+}
+.socials-link{
+    color: var(--icon-color);
+}
+.socials-icon{
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
 }
